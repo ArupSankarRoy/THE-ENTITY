@@ -17,10 +17,19 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
    - In Phase 2, the application excels in detecting, segmenting, and presenting heatmaps derived from images, offering a deeper layer of insight and understanding.
    - **PHASE 2 PAGE:**
      ![Screenshot 2024-02-15 133715](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/b6c6f9f1-2949-4c66-b0d0-e820685fbe88)
+   - **PHASE 2 OUTPUT:**
+      ![Screenshot 2024-02-15 134007](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/c84b57ee-a0fe-45f4-8b49-1495b83fc6bd)
 
 
 3. **Webcam-Based Anomaly Detection**
    - Phase 3 introduces a sleek black theme, enhancing the aesthetics while enabling webcam-based detection of anomalous objects. The flexibility to use external webcams enhances the overall user experience.
+   - **PHASE 3 PAGE:**
+     ![Screenshot 2024-02-15 134044](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/4a41a7ca-e5f2-4d16-83b6-423510b8bda3)
+   - **PHASE 3 OUTPUTS:**
+     ![Screenshot 2024-02-15 134122](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/6ecd13dd-0d52-4263-a5d5-222885bb9724)
+     ![Screenshot 2024-02-15 134154](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/5ffeb4ea-7dd0-4a73-ae1c-133c1f28b7be)
+
+
 
 4. **Customized Training Function (Under Development)**
    - The ongoing development of a customized training function holds immense potential for refining the application's capabilities, allowing users to tailor the system to specific needs.
@@ -77,3 +86,6 @@ As The Entity continues to evolve, it aims to set new standards in real-time vid
 Your feedback is crucial to our development process. Feel free to reach out, report issues, and share your suggestions as we work together to shape the future of video analysis and computer vision.
 
 Happy exploring with The Entity!
+
+- **DEMO VIDEO:**
+- 
