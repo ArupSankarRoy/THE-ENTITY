@@ -1,7 +1,7 @@
 # The Entity - Revolutionary Hybrid Video Analysis and Computer Vision Web Application
 
 ## Overview
-
+##---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web application designed to redefine real-time detection capabilities. This project is divided into three distinctive phases, each contributing to the application's prowess in analyzing video frames instantly.
 
 ### Key Features
