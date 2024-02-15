@@ -102,4 +102,5 @@ Your feedback is crucial to our development process. Feel free to reach out, rep
 Happy exploring with The Entity!
 
 - **DEMO VIDEO:**
-- 
+- [Download The Entity](https://drive.google.com/file/d/1bK_SFv0EmgxaIwiEx5I0Pa9NnVtSzHPB/view?usp=sharing)
+
