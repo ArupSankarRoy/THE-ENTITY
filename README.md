@@ -79,7 +79,7 @@ INSERT INTO `user` (`name`, `email`, `password`) VALUES
 
 ```
 2. CLONE THE DIRECTORY AND MOVE TO THE 'THE-ENTITY' FOLDER
-   **CODE:**
+-  **CODE:**
 ```
 $ git clone https://github.com/ArupSankarRoy/THE-ENTITY.git
 $ cd THE-ENTITY
