@@ -1,4 +1,4 @@
-# <style>H2{color:DarkOrange;}</style>
+<style>H2{color:DarkOrange;}</style>
 
 ![Screenshot 2024-02-15 133341](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/00cd2ebd-8e93-4358-b300-b042eab7df41)
 
