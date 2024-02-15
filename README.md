@@ -33,12 +33,30 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 ## Getting Started
 
 To experience the cutting-edge capabilities of The Entity, follow the steps below:
+
 ```
-$ git clone https://github.com/your_username/TheEntity.git
-2. Navigate to the project directory: `cd TheEntity`
-3. Follow the installation instructions in the provided documentation.
-4. Run the application and start exploring the revolutionary features.
+$ git clone https://github.com/ArupSankarRoy/THE-ENTITY.git
+$ cd THE-ENTITY
+$ pip install -r requirements.txt
 ```
+AFTER FINISHING THE ABOVE STEPS CREATE A DATABASE AND CHANGE THE NAME AND PORT NUMBER OF YOUR DATABASE IN 'app.py' LOGIN SECTION.
+DATABASE CODE:
+```
+USE `user-system`;
+
+CREATE TABLE `user` (
+  `userid` int(11) AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `user` (`name`, `email`, `password`) VALUES
+('John Smith', 'smith@webdamn.com', '123'),
+('Adam William', 'adam@webdamn.com', '123');
+
+```
+
 ## Stay Tuned
 
 As The Entity continues to evolve, it aims to set new standards in real-time video analysis and computer vision. Stay tuned for regular updates, exciting features, and improvements.
