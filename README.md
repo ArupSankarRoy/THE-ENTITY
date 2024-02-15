@@ -7,10 +7,10 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 
 ### Login and Registration Section:
 -   **USER LOGIN:**
--   ![Screenshot 2024-02-15 133221](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/69610d2c-2d20-4c8b-99e0-05dc0146d0e7)
+    ![Screenshot 2024-02-15 133221](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/69610d2c-2d20-4c8b-99e0-05dc0146d0e7)
 
 -   **USER REGISTRATION:**
--   ![Screenshot 2024-02-15 133243](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/a202c0fe-79c2-45e8-80f5-b729283d9e98)
+    ![Screenshot 2024-02-15 133243](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/a202c0fe-79c2-45e8-80f5-b729283d9e98)
 
 ### Key Features
 
