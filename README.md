@@ -24,11 +24,13 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 
 ## Future Developments
 
-- **Supervised Learning Integration:** Future updates will include the integration of supervised learning to enhance the application's accuracy and efficiency in detecting and analyzing objects.
+- **ROBOFLOW'S SUPERVISION INTEGRATION FOR OBJECT TRACKING:** Future updates will include the integration of supervision library to enhance the application's accuracy and efficiency in detecting and tracking objects.
 
-- **Chatbot Integration:** To foster enhanced user interaction, a chatbot feature is in the pipeline, providing users with informative and interactive assistance.
+- **CHATBOT INTEGRATION:** To foster enhanced user interaction, a chatbot feature is in the pipeline, providing users with informative and interactive assistance.
 
-- **Real-Time Prediction Graph:** A real-time prediction graph will be introduced to offer users valuable insights, further solidifying The Entity's position as a leader in real-time video analysis and computer vision.
+- **REALTIME PREDICTION GRAPH:** A real-time prediction graph will be introduced to offer users valuable insights, further solidifying The Entity's position as a leader in real-time video analysis and computer vision.
+
+- **CUSTOMIZE TRAINING PAGE:** A seperate html page will be added for seeing the training progress live.
 
 ## Getting Started
 
@@ -40,8 +42,11 @@ $ cd THE-ENTITY
 $ pip install -r requirements.txt
 ```
 AFTER FINISHING THE ABOVE STEPS CREATE A DATABASE AND CHANGE THE NAME AND PORT NUMBER OF YOUR DATABASE IN 'app.py' LOGIN SECTION.
-DATABASE CODE:
+
 ```
+-- DATABASE CODE:
+-- USE XAMPP MUST
+
 USE `user-system`;
 
 CREATE TABLE `user` (
@@ -56,6 +61,7 @@ INSERT INTO `user` (`name`, `email`, `password`) VALUES
 ('Adam William', 'adam@webdamn.com', '123');
 
 ```
+**USE CHROME BROWSER AND BE CAUTIOUS THE GPU MUST BE ON BEFORE RUNNING THIS APPLICATION FOR BETTER PERFORMANCE**
 
 ## Stay Tuned
 
