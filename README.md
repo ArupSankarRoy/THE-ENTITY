@@ -33,12 +33,12 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 ## Getting Started
 
 To experience the cutting-edge capabilities of The Entity, follow the steps below:
-
-1. Clone the repository: `git clone https://github.com/your_username/TheEntity.git`
+```
+$ git clone https://github.com/your_username/TheEntity.git
 2. Navigate to the project directory: `cd TheEntity`
 3. Follow the installation instructions in the provided documentation.
 4. Run the application and start exploring the revolutionary features.
-
+```
 ## Stay Tuned
 
 As The Entity continues to evolve, it aims to set new standards in real-time video analysis and computer vision. Stay tuned for regular updates, exciting features, and improvements.
