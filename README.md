@@ -1,4 +1,4 @@
-# A very <span style='color: red;'>long</span> sentence.
+## ${\color{lightgreen}THE-ENTITY \space Revolutionary \space Hybrid \space Video \space Analysis \space Web \space Application}$ <br>
 
 ![Screenshot 2024-02-15 133341](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/00cd2ebd-8e93-4358-b300-b042eab7df41)
 
