@@ -7,11 +7,17 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 
 ### Key Features
 
-1. **Real-Time Object Identification**
+1. **Real-Time Object Identification and Monitoring**
    - Phase 1 focuses on immediate identification of weapons, military vehicles, and public anomalies in real-time, providing analysis per video frame rather than waiting for post-video completion.
+     **PHASE 1 OUTPUT:**
+     ![Screenshot 2024-02-15 133559](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/857db05c-3e4a-46cd-9d17-2f4cd6ca6f69)
+     
 
-2. **Heatmap Visualization**
+2. **Detection , Segmentation , Heatmap Visualization**
    - In Phase 2, the application excels in detecting, segmenting, and presenting heatmaps derived from images, offering a deeper layer of insight and understanding.
+     **PHASE 2 PAGE:**
+     ![Screenshot 2024-02-15 133715](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/b6c6f9f1-2949-4c66-b0d0-e820685fbe88)
+
 
 3. **Webcam-Based Anomaly Detection**
    - Phase 3 introduces a sleek black theme, enhancing the aesthetics while enabling webcam-based detection of anomalous objects. The flexibility to use external webcams enhances the overall user experience.
