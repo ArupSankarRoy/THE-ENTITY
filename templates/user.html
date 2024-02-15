@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Entity - Video Analysis Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+
+        #header {
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #800000, #200040); 
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: gradientAnimation 5s linear infinite; 
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes neonWave {
+            0% {
+                border-image: linear-gradient(45deg, transparent 0%, #fff 20%, transparent 40%, #fff 60%, transparent 80%, #fff 100%);
+                border-image-slice: 1;
+                border-image-width: 2px;
+                border-image-repeat: repeat;
+            }
+            100% {
+                border-image: linear-gradient(45deg, transparent 0%, #fff 20%, transparent 40%, #fff 60%, transparent 80%, #fff 100%);
+                border-image-slice: 1;
+                border-image-width: 2px;
+                border-image-repeat: repeat;
+            }
+        }
+
+        @keyframes lightningEffect {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                background-color: #200000; 
+            }
+            10%, 30%, 50%, 70%, 90% {
+                background-color: #fff;
+            }
+        }
+
+        #typewriter-container {
+            height: 200px; 
+            overflow: hidden;
+        
+        }
+
+
+        @keyframes fullMoonColorChange {
+            0%, 100% {
+                color: #F6F7C4; 
+            }
+            50% {
+                color: #C7C8CC; 
+            }
+        }
+
+        #typewriter {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.0);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.0);
+            backdrop-filter: blur(10px);
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+            font-family: "Stylish", serif;
+            font-weight: 500;
+            font-style: normal;
+            animation: fullMoonColorChange 5s ease-in-out infinite; 
+        }
+        .blinking-cursor {
+            margin-left: 5px;
+            background-color: #fff;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+            opacity: 1;
+            }
+            50.1%, 100% {
+            opacity: 0;
+            }
+        }
+
+        #whole_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            flex-grow: 1;
+        }
+
+        #video-input {
+            margin: 20px;
+            padding: 15px;
+            background-color: rgba(224, 224, 224, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: spookyPulse 2s ease-in-out infinite alternate; 
+        }
+
+        @keyframes spookyPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            100% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
+            }
+        }
+
+        #video-input:hover {
+            background-color: rgba(224, 224, 224, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: none; 
+        }
+
+        #buttons_container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 0 35px; 
+            padding: 35px;
+            background-color: rgba(30, 30, 30, 0.8); 
+            color: #ccc; 
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(100, 100, 100, 0.4);
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth cubic-bezier transition */
+            animation: dullMoon 5s linear infinite; 
+        }
+
+        @keyframes dullMoon {
+            0% {
+                background-color: rgba(30, 30, 30, 0.8);
+                box-shadow: 0 4px 8px rgba(100, 100, 100, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                background-color: rgba(200, 200, 200, 0.6); 
+                box-shadow: 0 0 20px 10px rgba(150, 150, 150, 0.8); 
+                transform: scale(0.95);
+            }
+            100% {
+                background-color: rgba(30, 30, 30, 0.8);
+                box-shadow: 0 4px 8px rgba(100, 100, 100, 0.4);
+                transform: scale(1);
+            }
+        }
+
+
+        .button-container:hover {
+            transform: scale(1.05);
+        }
+
+        .button-info {
+            margin-top: 20px;
+            width: 250px;
+            height: 120px;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        button {
+            background: linear-gradient(45deg, #4a0000, #880e4f); 
+            color: rgb(255, 255, 255);
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.5s, box-shadow 0.5s, background 0.5s, color 0.5s;
+            animation: pulsate 3s ease-in-out infinite;
+
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+
+            @keyframes pulsate {
+                0%, 100% {
+                    transform: scale(1);
+                    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+                }
+                25%, 75% {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+                }
+                50% {
+                    transform: scale(0.9);
+                    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+                }
+            }
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #4a0000, #880e4f); 
+            box-shadow: 0 0 20px rgba(255, 0, 0, 1); 
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+        }
+
+        button:hover::before {
+            content: '\2022'; /* Unicode bullet character */
+            color: rgba(255, 0, 0, 0.7);
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bloodSplatter 1s ease-in-out;
+        }
+
+        @keyframes bloodSplatter {
+            0% {
+                transform: translate(-50%, 0) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+
+        #logout {
+            position: absolute;
+            margin-top: 30px;
+            text-align: center;
+            top:-25px;
+            right: 22px;
+        }
+
+        #logout button {
+            background: linear-gradient(45deg, #FF5252, #FFD54F);
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        #logout button:hover {
+            background: linear-gradient(45deg, #FFD54F, #FF5252); 
+        }
+        p {
+            margin: 8px 0; 
+            font-size: 20px; 
+            line-height: 1; 
+            text-indent: 0; 
+            font-family: "Yanone Kaffeesatz", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color:#FFF7F1;
+        }
+        .bullet {
+            font-size: 18px; 
+            margin-right: 5px; 
+            background-image: linear-gradient(to right, rgb(0, 123, 255), rgb(0, 191, 255)); 
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; 
+            display: inline-block; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        @media screen and (max-width: 768px) {
+
+            body {
+                font-size: 16px;
+            }
+
+            #typewriter-container {
+                height: auto; 
+            }
+
+            #typewriter {
+                font-size: 16px;
+                padding: 10px;
+                margin: 0; 
+            }
+
+            #video-input,
+            .button-container {
+                width: calc(100% - px); 
+                box-sizing: border-box; 
+            }
+
+            #buttons_container {
+                flex-direction: column; 
+                align-items: center; 
+                margin: 10px 0; 
+            }
+
+            .button-container {
+                margin: 10px 0; 
+                padding: 55px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px 15px; 
+                width: 100%;
+            }
+
+            #video-input {
+                margin: 10px 0; 
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+          
+            #typewriter-container {
+                height: auto;
+            }
+            body {
+                font-size: 12px;
+            }
+
+            #typewriter {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            #buttons_container {
+                flex-direction: column;
+                align-items: center;
+                margin: 10px;
+            }
+
+            .button-container {
+                margin: 10px 0;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+
+            #video-input,
+            .button-container {
+                width: calc(100% - 20px); 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="header">The Entity<div id="logout">
+         <button onclick="logout()">Logout</button>
+    </div></h1>
+    <div id="typewriter-container">
+        <div id="typewriter" style="margin-top: 10px;">
+            Entity is a versatile video analysis application powered by YOLOv8 deep learning models, offering real-time threat detection by
+            identifying weapons, illegal activities, and anomalies in people's behavior. Utilizing OpenCV for efficient video processing,
+            the app features a user-friendly interface for seamless video and image uploads, as well as live webcam use. 
+            This tool enhances security and surveillance, providing proactive threat detection and response in various situations.
+        </div>
+    </div>
+    <div id="whole_container">
+        <div id="video-input">
+            <form id="uploadFormVideo" method="post" action="/user" enctype="multipart/form-data">
+                <div class='file_input'>
+                    <input type="file" name="file" id="fileInput" accept="video/*" required onchange="submitForm()">
+                </div>
+            </form>
+        </div>
+    
+        <div id="buttons_container">
+            <div class="button-container">
+                <div class="button-info">
+                    <p><span class="bullet">&#8226;</span>Instantly identify threats in videos.</p>
+                    <p><span class="bullet">&#8226;</span> Only one video allowed at a time.</p>
+                    <p><span class="bullet">&#8226;</span> Enhanced technology for effective monitoring.</p>
+                </div>
+                <button onclick="redirectToVideoStream()">PHASE 1</button>
+                <div id="start-streaming-status"></div>
+            </div>
+            <div class="button-container">
+                <div class="button-info">
+                    <p><span class="bullet">&#8226;</span>Detecting objects from image.</p>
+                    <p><span class="bullet">&#8226;</span>Utilizing image detection, segmentation, and heatmap preparation.</p>
+                    <p><span class="bullet">&#8226;</span>Optimized for ease of use.</p>
+                </div>
+                <button onclick="redirectToImagePrediction()">PHASE 2</button>
+                <div id="train-model-status"></div>
+            </div>
+            <div class="button-container">
+                <div class="button-info">
+                    <p><span class="bullet">&#8226;</span> Detect objects in real-time through the webcam.</p>
+                    <p><span class="bullet">&#8226;</span>Theme applied for a sleek, dark interface.</p>
+                    <p><span class="bullet">&#8226;</span> UI designed for maximum user convenience.</p>
+                </div>
+                <button onclick="redirectToLivePrediction()">PHASE 3</button>
+                <div id="live-video-status"></div>
+            </div>
+        </div>
+    </div>
+    <div id="logout">
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        const typewriter = document.getElementById('typewriter');
+        const text = typewriter.textContent.trim();
+        let index = 0;
+
+        function type() {
+            if (index <= text.length) {
+                typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">|</span>';
+                index++;
+                setTimeout(type, Math.random() * 50 + 20);
+            } else {
+                index = 0; 
+                setTimeout(type, 1000); 
+            }
+        }
+
+        // Start typing
+        type();
+
+        // Rain and Lightning effect script
+        var canvas1 = document.createElement('canvas');
+        var canvas2 = document.createElement('canvas');
+        var canvas3 = document.createElement('canvas');
+        document.body.appendChild(canvas1);
+        document.body.appendChild(canvas2);
+        document.body.appendChild(canvas3);
+
+        var ctx1 = canvas1.getContext('2d');
+        var ctx2 = canvas2.getContext('2d');
+        var ctx3 = canvas3.getContext('2d');
+        
+        var canvas1 = document.createElement('canvas');
+        var canvas2 = document.createElement('canvas');
+        var canvas3 = document.createElement('canvas');
+        document.body.appendChild(canvas1);
+        document.body.appendChild(canvas2);
+        document.body.appendChild(canvas3);
+
+        var ctx1 = canvas1.getContext('2d');
+        var ctx2 = canvas2.getContext('2d');
+        var ctx3 = canvas3.getContext('2d');
+
+        var rainthroughnum = 500;
+        var speedRainTrough = 15;
+        var RainTrough = [];
+
+        var rainnum = 500;
+        var rain = [];
+
+        var lightning = [];
+        var lightTimeCurrent = 0;
+        var lightTimeTotal = 0;
+
+        var w = canvas1.width = canvas2.width = canvas3.width = window.innerWidth;
+        var h = canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
+        window.addEventListener('resize', function () {
+            w = canvas1.width = canvas2.width = canvas3.width = window.innerWidth;
+            h = canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
+        });
+
+        function random(min, max) {
+            return Math.random() * (max - min + 1) + min;
+        }
+
+        function clearcanvas1() {
+            ctx1.clearRect(0, 0, w, h);
+        }
+
+        function clearcanvas2() {
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+        }
+
+        function clearCanvas3() {
+            ctx3.globalCompositeOperation = 'destination-out';
+            ctx3.fillStyle = 'rgba(0,0,0,' + random(1, 30) / 100 + ')';
+            ctx3.fillRect(0, 0, w, h);
+            ctx3.globalCompositeOperation = 'source-over';
+        };
+
+        function createRainTrough() {
+            for (var i = 0; i < rainthroughnum; i++) {
+                RainTrough[i] = {
+                    x: random(0, w),
+                    y: random(0, h),
+                    length: Math.floor(random(1, 830)),
+                    opacity: Math.random() * 0.2,
+                    xs: random(-2, 2),
+                    ys: random(10, 20)
+                };
+            }
+        }
+
+        function createRain() {
+            for (var i = 0; i < rainnum; i++) {
+                rain[i] = {
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    l: Math.random() * 1,
+                    xs: -4 + Math.random() * 4 + 2,
+                    ys: Math.random() * 10 + 10
+                };
+            }
+        }
+
+        function createLightning() {
+            var x = random(100, w - 100);
+            var y = random(0, h / 4);
+
+            var createCount = random(1, 3);
+            for (var i = 0; i < createCount; i++) {
+                single = {
+                    x: x,
+                    y: y,
+                    xRange: random(5, 30),
+                    yRange: random(10, 25),
+                    path: [{
+                        x: x,
+                        y: y
+                    }],
+                    pathLimit: random(40, 55)
+                };
+                lightning.push(single);
+            }
+        };
+
+        function drawRainTrough(i) {
+            ctx1.beginPath();
+            var grd = ctx1.createLinearGradient(0, RainTrough[i].y, 0, RainTrough[i].y + RainTrough[i].length);
+            grd.addColorStop(0, "rgba(255,255,255,0)");
+            grd.addColorStop(1, "rgba(255,255,255," + RainTrough[i].opacity + ")");
+
+            ctx1.fillStyle = grd;
+            ctx1.fillRect(RainTrough[i].x, RainTrough[i].y, 1, RainTrough[i].length);
+            ctx1.fill();
+        }
+
+        function drawRain(i) {
+            ctx2.beginPath();
+            ctx2.moveTo(rain[i].x, rain[i].y);
+            ctx2.lineTo(rain[i].x + rain[i].l * rain[i].xs, rain[i].y + rain[i].l * rain[i].ys);
+            ctx2.strokeStyle = 'rgba(174,194,224,0.5)';
+            ctx2.lineWidth = 1;
+            ctx2.lineCap = 'round';
+            ctx2.stroke();
+        }
+
+        function drawLightning() {
+            for (var i = 0; i < lightning.length; i++) {
+                var light = lightning[i];
+
+                light.path.push({
+                    x: light.path[light.path.length - 1].x + (random(0, light.xRange) - (light.xRange / 2)),
+                    y: light.path[light.path.length - 1].y + (random(0, light.yRange))
+                });
+
+                if (light.path.length > light.pathLimit) {
+                    lightning.splice(i, 1);
+                }
+
+                ctx3.strokeStyle = 'rgba(255, 255, 255, .1)';
+                ctx3.lineWidth = 3;
+                if (random(0, 15) === 0) {
+                    ctx3.lineWidth = 6;
+                }
+                if (random(0, 30) === 0) {
+                    ctx3.lineWidth = 8;
+                }
+
+                ctx3.beginPath();
+                ctx3.moveTo(light.x, light.y);
+                for (var pc = 0; pc < light.path.length; pc++) {
+                    ctx3.lineTo(light.path[pc].x, light.path[pc].y);
+                }
+                if (Math.floor(random(0, 30)) === 1) {
+                    ctx3.fillStyle = 'rgba(255, 255, 255, ' + random(1, 3) / 100 + ')';
+                    ctx3.fillRect(0, 0, w, h);
+                }
+                ctx3.lineJoin = 'miter';
+                ctx3.stroke();
+            }
+        };
+
+        function animateRainTrough() {
+            clearcanvas1();
+            for (var i = 0; i < rainthroughnum; i++) {
+                if (RainTrough[i].y >= h) {
+                    RainTrough[i].y = h - RainTrough[i].y - RainTrough[i].length * 5;
+                } else {
+                    RainTrough[i].y += speedRainTrough;
+                }
+                drawRainTrough(i);
+            }
+        }
+
+        function animateRain() {
+            clearcanvas2();
+            for (var i = 0; i < rainnum; i++) {
+                rain[i].x += rain[i].xs;
+                rain[i].y += rain[i].ys;
+                if (rain[i].x > w || rain[i].y > h) {
+                    rain[i].x = Math.random() * w;
+                    rain[i].y = -20;
+                }
+                drawRain(i);
+            }
+        }
+
+        function animateLightning() {
+            clearCanvas3();
+            lightTimeCurrent++;
+            if (lightTimeCurrent >= lightTimeTotal) {
+                createLightning();
+                lightTimeCurrent = 0;
+                lightTimeTotal = 200;
+            }
+            drawLightning();
+        }
+
+        function init() {
+            createRainTrough();
+            createRain();
+            window.addEventListener('resize', createRainTrough);
+        }
+        init();
+
+        function animloop() {
+            animateRainTrough();
+            animateRain();
+            animateLightning();
+            requestAnimationFrame(animloop);
+        }
+        animloop();
+        function submitForm() {
+           document.getElementById("uploadFormVideo").submit();
+        }
+        document.getElementById("streamButton").addEventListener("click", function() {
+            redirectToStream();
+        });
+
+        function redirectToVideoStream() {
+
+            window.location.href = '/streaming';
+        }
+        function redirectToImagePrediction() {
+ 
+            window.location.href = '/predictFromImage';
+        }
+        function redirectToLivePrediction() {
+
+            window.location.href = '/live';
+        }
+        function logout() {
+            
+            window.location.href = '/logout';
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

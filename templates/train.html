@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Page</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #2980b9, #3498db, #2c3e50); /* Gradient background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .training-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* Soft box shadow */
+            max-width: 600px;
+            width: 80%;
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: #ecf0f1; /* Light text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for visibility */
+            animation: pulse 1.5s infinite alternate; /* Pulsating effect */
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+
+        .loading-spinner {
+            border: 8px solid #fff;
+            border-top: 8px solid #e74c3c; /* Red border for spinner */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-top: 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/basketball.png'); /* Background pattern */
+            opacity: 0.15; /* Adjust opacity as needed */
+            pointer-events: none; /* Ensure pattern doesn't interfere with user interactions */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="training-container">
+        <h1>Training in Progress...</h1>
+        <p>This may take a moment. Please wait.</p>
+        <div class="loading-spinner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Entity phase 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #0d0d0d, #001f3f);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        header {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #64B5F6;
+            text-align: center;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .typewriter-container {
+            max-width: 777px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            text-align: justify;
+            line-height: 1.8;
+            color: #ddd;
+            overflow: hidden;
+            height: 90px;
+            width: 777px;
+        }
+        .blinking-cursor {
+            margin-left: 5px;
+            background-color: #fff;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+            opacity: 1;
+            }
+            50.1%, 100% {
+            opacity: 0;
+            }
+        }
+
+        .file_input {
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 16px;
+        }
+
+        .file_input:hover {
+            transform: scale(1.05);
+            border: 2px solid #64B5F6;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 30px;
+            background: linear-gradient(180deg, #0d0d0d, #001f3f);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .row1,
+        .row2 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .col-md-6 {
+            flex: 0 0 48%;
+        }
+
+        .picture-block {
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            transition: transform 0.4s, border 0.4s, box-shadow 0.4s;
+        }
+
+        .picture-block:hover {
+            transform: scale(1.05);
+            border: 2px solid #64B5F6;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .graph-block {
+            display: none; 
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            margin-top: 20px;
+            transition: transform 0.4s, border 0.4s, box-shadow 0.4s;
+        }
+
+        .graph-block:hover {
+            transform: scale(1.05);
+            border: 2px solid #64B5F6;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background: linear-gradient(45deg, #64B5F6, #81C784);
+            color: rgb(255, 255, 255);
+            padding: 18px 35px;
+            font-size: 20px;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #81C784, #64B5F6);
+            color: #333;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        ENTITY phase 2
+    </header>
+
+    <div class="typewriter-container">
+        <div id="typewriter">
+            Integrated within the comprehensive Entity application, the image analysis module focuses on detecting and segmenting specific
+            elements like 'alcohol,' 'gambling,' 'marijuana,' 'sexual content,' 'smoking,' and 'weapons.' With advanced capabilities,
+            it efficiently presents heatmaps, providing valuable insights and reinforcing the application's prowess in comprehensive visual content analysis.
+        </div>
+    </div>
+
+    <form id="uploadFormImage" method="post" action="/predictFromImage" enctype="multipart/form-data">
+        <div class='file_input'>
+            <input type="file" name="file" id="fileInput" autocomplete="off" required onchange="submitForm()">
+        </div>
+    </form>
+    
+    <!-- Container with Image and Graph Blocks -->
+    <div class="container">
+        <div class="row1">
+            <!-- Upper Left Image Block -->
+            <div class="col-md-6">
+                <div class="picture-block" id="imageBlock1">
+                    {% if uploaded_image %}
+                        <img id="selectedImage1" alt="Selected Image" src="{{ uploaded_image }}">
+                    {% else %}
+                        <img id="selectedImage1" alt="Default Image" src="{{ default_image }}">
+                    {% endif %}
+                </div>
+            </div>
+            <!-- Upper Right Image Block -->
+            <div class="col-md-6">
+                <div class="picture-block" id="imageBlock2">
+                    <img id="selectedImage2" alt="Selected Image 2" src="https://th.bing.com/th/id/OIG1.tTvhYatr6BUitzpqAYgU?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn">
+                </div>
+            </div>
+        </div>
+
+        <div class="row2">
+            <!-- Lower Left Image Block -->
+            <div class="col-md-6">
+                <div class="picture-block" id="imageBlock3">
+                    <img id="selectedImage3" alt="Selected Image 3" src="https://th.bing.com/th/id/OIG2.cLpgqW2f23ep9Kq3FLUK?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn">
+                </div>
+            </div>
+            <!-- Lower Right Image Block -->
+            <div class="col-md-6">
+                <div class="picture-block" id="imageBlock4">
+                    <img id="selectedImage4" alt="Selected Image 4" src="https://th.bing.com/th/id/OIG2.WF8bXwL5C4hdA5inQtmE?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Predict Button -->
+    <button onclick="simulatePrediction()">Predict</button>
+
+    <!-- JavaScript for Image Preview and Simulation -->
+    <script>
+        const typewriter = document.getElementById('typewriter');
+        const text = typewriter.textContent.trim();
+        let index = 0;
+
+        function type() {
+            if (index <= text.length) {
+            typewriter.innerHTML = text.slice(0, index) + '<span class="blinking-cursor">|</span>';
+            index++;
+            setTimeout(type, Math.random() * 50 + 20);
+            } else {
+            index = 0; // Reset index when reaching the end of text
+            setTimeout(type, 1000); // Wait for 1 second before starting again (adjust as needed)
+            }
+        }
+
+        // Start typing
+        type();
+        function submitForm() {
+            document.getElementById("uploadFormImage").submit();
+        } 
+
+        function simulatePrediction() {
+
+            fetch('/predict_Image')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Prediction failed');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data.message);
+
+                    const selectedImage1 = document.getElementById('selectedImage2');
+                    selectedImage1.src = '/static/output_detect_img.jpg';
+
+                    const selectedImage2 = document.getElementById('selectedImage3');
+                    selectedImage2.src = '/static/output_heatmap_img.jpg';
+
+                    const selectedImage3 = document.getElementById('selectedImage4');
+                    selectedImage3.src = '/static/output_segment_img.jpg';
+                })
+                .catch(error => console.error('Prediction request failed:', error));
+        }
+    </script>
+</body>
+
+</html>
+
+
+

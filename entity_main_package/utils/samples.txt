@@ -1,0 +1,6 @@
+alcohol
+gambling_element
+marijuana
+sexual-content
+smoking
+weapon

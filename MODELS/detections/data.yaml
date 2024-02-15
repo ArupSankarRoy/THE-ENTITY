@@ -1,0 +1,6 @@
+train: /content/DATASET/train/images
+val: /content/DATASET/valid/images
+test: /content/DATASET/test/images
+
+nc: 5
+names: ['car', 'civil', 'military_vehicle', 'soldier', 'weapon']

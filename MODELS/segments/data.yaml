@@ -1,0 +1,5 @@
+train: /content/DATASET/train/images
+val: /content/DATASET/valid/images
+
+nc: 6
+names: ['alcohol', 'gambling_element', 'marijuana', 'sexual-content', 'smoking', 'weapon']
