@@ -59,13 +59,7 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
 
 To experience the cutting-edge capabilities of The Entity, follow the steps below:
 
-```
-$ git clone https://github.com/ArupSankarRoy/THE-ENTITY.git
-$ cd THE-ENTITY
-$ pip install -r requirements.txt
-```
-AFTER FINISHING THE ABOVE STEPS CREATE A DATABASE AND CHANGE THE NAME AND PORT NUMBER OF YOUR DATABASE IN 'app.py' LOGIN SECTION.
-
+1. CREATE A DATABASE :
 ```
 -- DATABASE CODE:
 -- USE XAMPP MUST
@@ -84,7 +78,21 @@ INSERT INTO `user` (`name`, `email`, `password`) VALUES
 ('Adam William', 'adam@webdamn.com', '123');
 
 ```
-**USE CHROME BROWSER AND BE CAUTIOUS THE GPU MUST BE ON BEFORE RUNNING THIS APPLICATION FOR BETTER PERFORMANCE**
+2. CLONE THE DIRECTORY AND MOVE TO THE 'THE-ENTITY' FOLDER
+   **CODE:**
+```
+$ git clone https://github.com/ArupSankarRoy/THE-ENTITY.git
+$ cd THE-ENTITY
+$ pip install -r requirements.txt
+```
+AFTER FINISHING THE ABOVE STEPS CREATE A DATABASE AND 
+
+
+- **USE CHROME BROWSER AND BE CAUTIOUS THE GPU MUST BE ON BEFORE RUNNING THIS APPLICATION FOR BETTER PERFORMANCE**
+- **IN **
+```
+$ python launcher.py
+```
 
 ## Stay Tuned
 
