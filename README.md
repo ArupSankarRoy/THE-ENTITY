@@ -35,8 +35,6 @@ Welcome to The Entity, a cutting-edge hybrid video analysis computer vision web 
      ![Screenshot 2024-02-15 134044](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/4a41a7ca-e5f2-4d16-83b6-423510b8bda3)
    - **PHASE 3 OUTPUTS:**
      ![Screenshot 2024-02-15 134122](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/6ecd13dd-0d52-4263-a5d5-222885bb9724)
-     ![Screenshot 2024-02-15 134154](https://github.com/ArupSankarRoy/THE-ENTITY/assets/115450599/5ffeb4ea-7dd0-4a73-ae1c-133c1f28b7be)
-
 
 
 4. **Customized Training Function (Under Development)**
