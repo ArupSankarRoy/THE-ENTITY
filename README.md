@@ -90,7 +90,7 @@ $ pip install -r requirements.txt
 ```
 $ python launcher.py
 ```
-6. IN CHROME TYPE `http://127.0.0.1:5000/` TO REDIRECT THE SITE.
+6. TYPE `http://127.0.0.1:5000/` IN CHROME TO REDIRECT THE SITE.
 
 ## Stay Tuned
 
